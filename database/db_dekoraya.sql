@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v10.42 
-MySQL - 5.5.5-10.4.21-MariaDB : Database - db_dekoraya
+MySQL - 5.5.5-10.4.21-MariaDB : Database - dekoraya
 *********************************************************************
 */
 
@@ -12,120 +12,87 @@ MySQL - 5.5.5-10.4.21-MariaDB : Database - db_dekoraya
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-USE `db_dekoraya`;
+USE `dekoraya`;
 
-/*Table structure for table `tbl_admin` */
+/*Table structure for table `is_about` */
 
-DROP TABLE IF EXISTS `tbl_admin`;
+DROP TABLE IF EXISTS `is_about`;
 
-CREATE TABLE `tbl_admin` (
-  `id_admin` int(10) NOT NULL,
-  `username` varchar(100) DEFAULT NULL,
-  `password` text DEFAULT NULL,
-  `nama_lengkap` varchar(100) DEFAULT NULL,
-  `alamat` text DEFAULT NULL,
-  `no_hp` varchar(20) DEFAULT NULL,
-  `foto` text NOT NULL,
-  `tentang` text NOT NULL,
-  `level` enum('admin') NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE `is_about` (
+  `about_id` int(1) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`about_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-/*Data for the table `tbl_admin` */
+/*Data for the table `is_about` */
 
-insert  into `tbl_admin`(`id_admin`,`username`,`password`,`nama_lengkap`,`alamat`,`no_hp`,`foto`,`tentang`,`level`) values (1,'admin','c4ca4238a0b923820dcc509a6f75849b','aw','sdfdsgdsg','09808','foto-lastgooglenews-facebookdeepweb2.jpeg','bjdnfglkdsnfg','admin');
+insert  into `is_about`(`about_id`,`title`,`content`) values (1,'','<p><span style=\"font-size:18px\"><strong>Apa Itu Dekoraya Wedding Organizer ?</strong></span></p>\r\n\r\n<p><span style=\"font-family:courier new,courier,monospace\"><span style=\"font-size:16px\"><strong>Dekoraya Wedding Organizer&nbsp;</strong><span style=\"color:rgb(102, 102, 102)\">suatu perusahaan di bidang jasa khusus secara pribadi membantu calon pengantin dan keluarga mempelai dalam perencanaan dan supervisi pelaksanaan rangkaian acara pesta pernikahan sesuai jadwal yang diinginkan.</span></span></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Visi &amp; Misi Dekoraya Wedding Organizer</strong></span></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Visi :&nbsp;</strong></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\">\r\n	<p><span style=\"font-family:courier new,courier,monospace\"><span style=\"font-size:16px\">Menjadi Perusahaan wedding organizer yang menjadi pilihan bagi para calon pengantin dan menjadi trendsetter bagi para MUA</span></span></p>\r\n	</li>\r\n</ul>\r\n\r\n<p><strong><span style=\"font-size:18px\">Misi :</span></strong></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\">\r\n	<p><span style=\"font-family:courier new,courier,monospace\"><span style=\"font-size:16px\">Memberikan pelayanan dengan kualitas dan hasil terbaik untuk kepuasan pelanggan</span></span></p>\r\n	</li>\r\n	<li>\r\n	<p><span style=\"font-family:courier new,courier,monospace\"><span style=\"font-size:16px\">Mengembangkan produk dan jasa layanan yang inovatif untuk meningkatkan kepuasan pelanggan</span></span></p>\r\n	</li>\r\n</ul>');
 
-/*Table structure for table `tbl_app` */
+/*Table structure for table `is_message` */
 
-DROP TABLE IF EXISTS `tbl_app`;
+DROP TABLE IF EXISTS `is_message`;
 
-CREATE TABLE `tbl_app` (
-  `id_app` int(10) NOT NULL,
-  `gambar` text DEFAULT NULL,
-  `judul` varchar(100) DEFAULT NULL,
-  `url` text DEFAULT NULL,
-  `developer` varchar(100) DEFAULT NULL,
-  `ket` text DEFAULT NULL,
-  `view` int(100) DEFAULT NULL,
-  `tgl_app` varchar(12) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE `is_message` (
+  `message_id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `message` text NOT NULL,
+  `status` enum('y','n') NOT NULL DEFAULT 'n',
+  PRIMARY KEY (`message_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
-/*Data for the table `tbl_app` */
+/*Data for the table `is_message` */
 
-insert  into `tbl_app`(`id_app`,`gambar`,`judul`,`url`,`developer`,`ket`,`view`,`tgl_app`) values (2,'img/app/1.png','Web Profile','https://www.facebook.com/','Anwar-kun','Waw',10,'28-09-2017'),(3,'img/app/fb2016.png','slkdfnklds sdl ndsf pasdf ndsfg lasgf sal jskdhfjsldfnbld lsdngs dnk sdngd skgndskgdsnkk','https://www.youtube.com/','Ankun','sldfdsf',2,'28-09-2017');
+insert  into `is_message`(`message_id`,`date`,`name`,`email`,`message`,`status`) values (1,'2022-06-23 21:03:43','Danang Kesuma','danang.kesuma@gmail.com','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias?','y'),(2,'2022-06-23 21:03:40','dimas','dimaswahyu456@gmail.com','hi','y'),(3,'2022-06-23 21:03:36','tes','sdaadsa@gmail.com','sdasada','y');
 
-/*Table structure for table `tbl_artikel` */
+/*Table structure for table `is_portfolio` */
 
-DROP TABLE IF EXISTS `tbl_artikel`;
+DROP TABLE IF EXISTS `is_portfolio`;
 
-CREATE TABLE `tbl_artikel` (
-  `id_artikel` int(10) NOT NULL AUTO_INCREMENT,
-  `judul` varchar(100) DEFAULT NULL,
-  `isi` text DEFAULT NULL,
-  `gambar` text DEFAULT NULL,
-  `url` text DEFAULT NULL,
-  `view` int(100) DEFAULT NULL,
-  `tgl_artikel` varchar(12) DEFAULT NULL,
-  PRIMARY KEY (`id_artikel`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE `is_portfolio` (
+  `portfolio_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `image` varchar(100) NOT NULL,
+  PRIMARY KEY (`portfolio_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
-/*Data for the table `tbl_artikel` */
+/*Data for the table `is_portfolio` */
 
-/*Table structure for table `tbl_barang` */
+insert  into `is_portfolio`(`portfolio_id`,`title`,`description`,`image`) values (1,'Lorem ipsum dolor sit amet consectetur adipisicing elit',NULL,'1.jpg'),(2,'Quae repudiandae fugiat illo cupiditate',NULL,'2.jpg'),(3,'Natus quibusdam recusandae illum',NULL,'3.jpg'),(4,'Illo itaque ipsum sit harum',NULL,'4.jpg'),(5,'At quia quaerat asperiores',NULL,'5.jpg'),(6,'Dekorasi Pernikahan Bertema Bunga-Bunga',NULL,'dekoraya2.jpg'),(7,'Dekorasi Pernikahan Simpel Bertema Vintage',NULL,'Tema_vintage.jpg'),(8,'Dekorasi Pernikahan Simpel dengan Adat',NULL,'Tema_adat.jpg'),(9,'Dekorasi Pernikahan Simpel Bertema Putih',NULL,'Tema_Putih.jpg');
 
-DROP TABLE IF EXISTS `tbl_barang`;
+/*Table structure for table `is_service` */
 
-CREATE TABLE `tbl_barang` (
-  `id_barang` int(10) NOT NULL AUTO_INCREMENT,
-  `nama_kain` varchar(100) NOT NULL,
-  `harga` varchar(100) NOT NULL,
-  `ukuran` varchar(30) NOT NULL,
-  `jenis` varchar(30) NOT NULL,
-  `ket` text NOT NULL,
-  `gambar` text NOT NULL,
-  `view` varchar(20) NOT NULL,
-  `tgl_barang` varchar(12) NOT NULL,
-  PRIMARY KEY (`id_barang`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `is_service`;
 
-/*Data for the table `tbl_barang` */
+CREATE TABLE `is_service` (
+  `service_id` int(1) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`service_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-insert  into `tbl_barang`(`id_barang`,`nama_kain`,`harga`,`ukuran`,`jenis`,`ket`,`gambar`,`view`,`tgl_barang`) values (1,'kbxgjdsx','12000','L','Barang Keluar','sdfdx','img/barang/1.png','16','');
+/*Data for the table `is_service` */
 
-/*Table structure for table `tbl_kontak` */
+insert  into `is_service`(`service_id`,`title`,`content`) values (1,'Our Services','<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod</p>\r\n\r\n<ul>\r\n	<li><strong>Web Design,</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod.</li>\r\n	<li><strong>Web Development, </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod.</li>\r\n	<li><strong>Mobile Apps, </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod.</li>\r\n	<li><strong>Desktop Application, </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod.</li>\r\n	<li><strong>Course and Training</strong><strong>,&nbsp;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod.</li>\r\n	<li><strong>Photography</strong><strong>,&nbsp;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod</li>\r\n</ul>');
 
-DROP TABLE IF EXISTS `tbl_kontak`;
+/*Table structure for table `is_user` */
 
-CREATE TABLE `tbl_kontak` (
-  `id_kontak` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` text DEFAULT NULL,
-  `email` text DEFAULT NULL,
-  `komentar` text DEFAULT NULL,
-  `tgl_kontak` varchar(12) DEFAULT NULL,
-  PRIMARY KEY (`id_kontak`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `is_user`;
 
-/*Data for the table `tbl_kontak` */
+CREATE TABLE `is_user` (
+  `user_id` int(2) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `fullname` varchar(30) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-/*Table structure for table `tbl_web` */
+/*Data for the table `is_user` */
 
-DROP TABLE IF EXISTS `tbl_web`;
-
-CREATE TABLE `tbl_web` (
-  `id_web` int(10) NOT NULL AUTO_INCREMENT,
-  `nama_web` varchar(100) DEFAULT NULL,
-  `telp` text DEFAULT NULL,
-  `instagram` text DEFAULT NULL,
-  `whatsapp` text DEFAULT NULL,
-  `fb` text DEFAULT NULL,
-  `email` text DEFAULT NULL,
-  `alamat` text DEFAULT NULL,
-  `embed_lokasi` text DEFAULT NULL,
-  PRIMARY KEY (`id_web`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
-/*Data for the table `tbl_web` */
-
-insert  into `tbl_web`(`id_web`,`nama_web`,`telp`,`instagram`,`whatsapp`,`fb`,`email`,`alamat`,`embed_lokasi`) values (1,'Dekoraya','082245263340','https://www.instagram.com/dekorayasby/','https://api.whatsapp.com/send/?phone=6282245263340&text&app_absent=0','https://www.facebook.com/dekoraya.sby','email@ordodev.com','pakal, Surabaya','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2309938548005!2d103.59047141400866!3d-1.6162502365291318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e25888bda00f9a9%3A0xf31d2243e1bce25c!2sSTMIK+NH+JAMBI!5e0!3m2!1sen!2sid!4v1492084244131');
+insert  into `is_user`(`user_id`,`username`,`password`,`fullname`) values (1,'admin','21232f297a57a5a743894a0e4a801fc3','Administrator');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
