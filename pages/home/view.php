@@ -60,7 +60,7 @@
 
 <br><br>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-lg-12">
         <h2 style="padding-bottom: 20px" class="page-header center">Our Services</h2>
     </div>
@@ -142,7 +142,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <br><br>
 
@@ -189,45 +189,18 @@
 
 </div>
 
-<section id="kontak-neo" class="kontak">
-    <div class="text-center">
-        <h2 class="title-center wow fadeInDown"><strong>Hubungi Kami</strong></h2>
+<div class="row">
+    <div class="col-lg-12">
+        <h2 style="padding-bottom: 20px" class="page-header-telpon center">Hubungi Kami</h2>
     </div>
-    <div class="row container-fluid">
-        <div class="col-md-3 col-sm-6">
-            <div class="card facebook wow fadeInLeft">
-                <a href="https://www.facebook.com/neo.event.wedding.organizer">
-                    <div class="card-front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                    <div class="card-back">Kunjungi Facebook Kami</div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card no-hp wow fadeInLeft">
-                <a>
-                    <div class="card-front"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                    <div class="card-back">082132291570</div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card no-wa wow fadeInRight">
-                <a>
-                    <div class="card-front"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
-                    <div class="card-back">085103013553</div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card instagram wow fadeInRight">
-                <a href="https://www.instagram.com/neo.organizer/">
-                    <div class="card-front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                    <div class="card-back">Kunjungi Instagram Kami</div>
-                </a>
-            </div>
+    <div class="container">
+        <div class="col-lg-12" style="text-align: center;">
+            <a href="https://api.whatsapp.com/send/?phone=6282245263340&text&app_absent=0"><img src="images/whatsapp.png" width="100px" style="max-width: 150px;"></a>
+            <a href="https://web.facebook.com/dekoraya.sby"><img src="images/facebook.png" width="120px" style="max-width: 150px;"></a>
+            <a href="https://www.instagram.com/dekorayasby/"><img src="images/ig.png" width="100px" style="max-width: 150px;"></a>
         </div>
     </div>
-</section>
+</div>
 
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 
