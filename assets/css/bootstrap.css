@@ -5012,6 +5012,8 @@ a.badge:focus {
   -webkit-transition: border .2s ease-in-out;
        -o-transition: border .2s ease-in-out;
           transition: border .2s ease-in-out;
+  max-width: 100px;
+  max-height: 200px;
 }
 .thumbnail > img,
 .thumbnail a > img {

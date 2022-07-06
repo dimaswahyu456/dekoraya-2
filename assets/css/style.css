@@ -161,3 +161,12 @@ a:focus {
     text-decoration: none;
 }
 
+.row {
+    vertical-align: middle;
+  }
+.row span{
+    font-weight: 800;
+}
+.text-center {
+    text-align: center;
+}

@@ -1,4 +1,7 @@
-
+.bg-login {
+	background-image: url("../../../images/bg-dekoraya.jpg");
+	width: 100%;
+}
 
 .login-box-body, .register-box-body {
     background: #fff none repeat scroll 0 0;

@@ -34,14 +34,14 @@
     // jika menu portfolio dipilih, menu portfolio aktif
     if ($_GET["page"] == "portfolio") { ?>
         <li class="active">
-            <a href="portfolio"> Portfolio </a>
+            <a href="portfolio"> Galeri </a>
         </li>
     <?php
     }
     // jika tidak, menu portfolio tidak aktif
     else { ?>
         <li>
-            <a href="portfolio"> Portfolio </a>
+            <a href="portfolio"> Galeri </a>
         </li>
     <?php
     }

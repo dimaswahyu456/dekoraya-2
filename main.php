@@ -143,7 +143,7 @@ session_start();      // memulai session
             <div class="top">
                 <br><br>
                 <a href="portfolio">
-                    Portfolio
+                    Galeri
                 </a>
             </div>
         </header>

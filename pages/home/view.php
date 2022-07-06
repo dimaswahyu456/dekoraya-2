@@ -2,29 +2,59 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h2 style="padding-bottom: 20px" class="page-header center">
-            About Us
-        </h2>
 
-        <br>
     </div>
-
-    <div class="col-lg-4 profesional center">
-        <i class="fa fa-desktop"></i>
-        <h3>Profesional</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <div class="container">
+        <div class="col-lg-12" style="text-align: center;">
+            <img src="images/dekoraya-removebg.png" width="400px">
+        </div>
     </div>
-
-    <div class="col-lg-4 friendly center">
-        <i class="fa fa-user"></i>
-        <h3>Friendly</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <div class="container">
+        <div id="about" class="container-fluid">
+            <div class="row row1">
+                <div class="page-header" style="font-size: 21px;color: #000000!important;
+        text-shadow: 0em 0em 0.3em rgb(0 0 0 / 40%);text-align:center">
+                    <p>” One Stop Wedding Solution ”</p>
+                    <p>&nbsp;</p>
+                    <p>“Together, we will make your dream wedding comes true</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="col-lg-4 suitable center">
-        <i class="fa fa-cog"></i>
-        <h3>Suitable</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <div class="container">
+        <div id="about" class="container-fluid">
+            <div class="row row1">
+                <div class="page-header" style="font-size: 15px;color: #000000!important;text-align:center">
+                    <p>Dekoraya merupakan Wedding Planner dan Wedding Organizer yang termasuk perusahaan yang melayani di
+                        area Surabaya sekitarnya dan diluar Surabaya kami Melayani Paket Pernikahan yg saat ini banyak di butuhkan
+                        oleh Calon Pengantin</p>
+                    <p>Dekoraya memiliki team yang sangat komunikatif,kreatif,inovatif dan energic yang sangat bisa
+                        diandalkan untuk kelancaran acara pelanggan kami,mulai persiapan acara hingga saat acara berlangsung</p>
+                    <p>Dengan anda memilih Dekoraya, maka anda akan mendapatkan semua manfaat yang kami memberikan yaitu sebagai Wedding Planner dan
+                        Wedding Organizer untuk acara pernikahan yang anda impikan nanti dengan harga yang terjangkau dan berkualitas.</p>
+                    <p>Dekoraya memiliki team yang sangat berpengalaman dan sangat diandalkan
+                        untuk mempersiapkan acara anda jauh sebelum hari H hingga saat acara berlangsung</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="about" class="container-fluid">
+            <div class="row row1">
+                <div class="col-sm-6 "><img class="img-responsive center-block wow fadeInLeft" src="images/trusted.png" width="300px"></div>
+                <div class="col-sm-6 col">
+                    <p class="text-center wow fadeInRight" style="font-size: 30px;padding-top: 50px"><span class=" text-center garis">Trusted<br></span>Percayakanlah pesta pernikahan anda kepada kami, karena kami terpercaya dan dapat diandalkan</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row row2">
+                <div class="col-sm-6 col">
+                    <p class="text-center wow fadeInLeft" style="font-size: 30px;padding-top: 50px"><span class="text-center garis ">Precise & Responsive<br></span>Kami mengerjakan semua hal dengan tepat dan mudah untuk beradaptasi</p>
+                </div>
+                <div class="col-sm-6"><img class="img-responsive center-block img-col1row1 wow fadeInRight" src="images/precise.png" width="300px"></div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -119,7 +149,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h2 style="padding-bottom: 20px" class="page-header center">
-            Portfolio
+            Galeri
         </h2>
 
         <br>
@@ -128,7 +158,7 @@
     <div class="row">
         <?php
         // fungsi query untuk menampilkan data dari tabel portfolio
-        $query = mysqli_query($mysqli, "SELECT * FROM is_portfolio ORDER BY portfolio_id DESC LIMIT 6")
+        $query = mysqli_query($mysqli, "SELECT * FROM is_portfolio ORDER BY portfolio_id DESC LIMIT 3")
             or die('Ada kesalahan pada query tampil portfolio : ' . mysqli_error($mysqli));
 
         while ($data = mysqli_fetch_assoc($query)) {
@@ -158,6 +188,46 @@
 <div id="modal-form" class="modal" tabindex="-1">
 
 </div>
+
+<section id="kontak-neo" class="kontak">
+    <div class="text-center">
+        <h2 class="title-center wow fadeInDown"><strong>Hubungi Kami</strong></h2>
+    </div>
+    <div class="row container-fluid">
+        <div class="col-md-3 col-sm-6">
+            <div class="card facebook wow fadeInLeft">
+                <a href="https://www.facebook.com/neo.event.wedding.organizer">
+                    <div class="card-front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="card-back">Kunjungi Facebook Kami</div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card no-hp wow fadeInLeft">
+                <a>
+                    <div class="card-front"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="card-back">082132291570</div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card no-wa wow fadeInRight">
+                <a>
+                    <div class="card-front"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+                    <div class="card-back">085103013553</div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card instagram wow fadeInRight">
+                <a href="https://www.instagram.com/neo.organizer/">
+                    <div class="card-front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                    <div class="card-back">Kunjungi Instagram Kami</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 
